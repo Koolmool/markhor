@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { ChakraProvider, Button, Flex, Heading, Text, IconButton, Stack, useToast } from "@chakra-ui/react";
+import ProtectedRoute from '../components/ProtectedRoute';
 import PaymentMethods from "../components/PaymentMethods";
 import SocialLinks from "../components/SocialLinks";
 import CustomerServiceBot from "../components/CustomerServiceBot";
@@ -45,9 +46,11 @@ const Index = () => {
           <Button leftIcon={<FaShoppingCart />} colorScheme="teal" variant="solid">
             {language === "en" ? "View Cart" : "عرض السلة"}
           </Button>
-          <Button colorScheme="blue" variant="outline">
-            {language === "en" ? "Checkout" : "الدفع"}
-          </Button>
+          <ProtectedRoute>
+            <Button colorScheme="blue" variant="outline">
+              {language === "en" ? "Checkout" : "الدفع"}
+            </Button>
+          </ProtectedRoute>
         </Stack>
         <PaymentMethods />
         <CustomerServiceBot />

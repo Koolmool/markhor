@@ -1,4 +1,5 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import LoginPage from './pages/LoginPage';
 import Index from "./pages/Index";
 import CategoryPage from "./pages/CategoryPage";
 
@@ -8,6 +9,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/category/:category" element={<CategoryPage />} />
+        <Route path="/login" element={<LoginPage />} />
       </Routes>
     </Router>
   );
