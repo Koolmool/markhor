@@ -6,11 +6,14 @@ const ChatInterface = ({ isOpen }) => {
   const [isFirstMessage, setIsFirstMessage] = useState(true);
   const toast = useToast();
 
+  const userGender = "male"; // Mock user gender, replace with actual logic to determine the user's gender
+
   useEffect(() => {
+    const welcomeMessage = userGender === "male" ? "Salam baba" : "Salam mama";
     if (isOpen && isFirstMessage) {
       toast({
         title: "Raju",
-        description: "Salam baba",
+        description: welcomeMessage,
         status: "info",
         duration: 5000,
         isClosable: true,
