@@ -24,16 +24,25 @@ const CustomerServiceBot = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  return (
-    <Box position="fixed" bottom="4" right="4" zIndex="tooltip">
-      {showBot && <IconButton icon={<FaRobot />} colorScheme="teal" variant="solid" size="lg" isRound onClick={handleBotClick} aria-label="Customer Service Bot" />}
-      {isChatOpen && <ChatInterface isOpen={isChatOpen} />}
-    </Box>
-  );
+  useEffect(() => {
+    const handleScroll = () => {
+      const isTop = window.scrollY < 50;
+      setShowBot(isTop);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <Box position="fixed" bottom="4" right="4" zIndex="tooltip">
-      <IconButton icon={<FaRobot />} colorScheme="teal" variant="solid" size="lg" isRound onClick={handleBotClick} aria-label="Customer Service Bot" />
+      {showBot && (
+        <>
+          <IconButton icon={<FaRobot />} colorScheme="teal" variant="solid" size="lg" isRound onClick={handleBotClick} aria-label="Customer Service Bot" />
+          {isChatOpen && <ChatInterface isOpen={isChatOpen} />}
+        </>
+      )}
     </Box>
   );
 };
