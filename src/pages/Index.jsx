@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { ChakraProvider, Button, Flex, Heading, Text, IconButton, Stack, useToast } from "@chakra-ui/react";
+import PaymentMethods from "../components/PaymentMethods";
 import SocialLinks from "../components/SocialLinks";
 import CustomerServiceBot from "../components/CustomerServiceBot";
 import Categories from "../components/Categories";
@@ -40,7 +41,7 @@ const Index = () => {
           <IconButton icon={<FaPlus />} aria-label="Add to cart" />
         </Flex>
 
-        <Stack spacing={4} direction="row" align="center" my={6}>
+        <Stack spacing={4} direction="row" align="center" my={4}>
           <Button leftIcon={<FaShoppingCart />} colorScheme="teal" variant="solid">
             {language === "en" ? "View Cart" : "عرض السلة"}
           </Button>
@@ -48,6 +49,7 @@ const Index = () => {
             {language === "en" ? "Checkout" : "الدفع"}
           </Button>
         </Stack>
+        <PaymentMethods />
         <CustomerServiceBot />
       </Flex>
     </ChakraProvider>
