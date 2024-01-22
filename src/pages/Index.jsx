@@ -5,7 +5,7 @@ import PaymentMethods from "../components/PaymentMethods";
 import SocialLinks from "../components/SocialLinks";
 import CustomerServiceBot from "../components/CustomerServiceBot";
 import Categories from "../components/Categories";
-import { FaShoppingCart, FaLanguage, FaPlus, FaMinus } from "react-icons/fa";
+import { FaShoppingCart, FaLanguage, FaPlus, FaMinus, FaUserCircle, FaBars } from "react-icons/fa";
 import Logo from "../components/Logo";
 
 const Index = () => {
@@ -26,10 +26,15 @@ const Index = () => {
 
   return (
     <ChakraProvider>
-      <Flex direction="column" align="center" justify="center" minH="100vh" p={4}>
-        <Logo />
-        <Heading mb={4}>{language === "en" ? "Welcome to Tiجarat, where the gulf comes to shop" : "مرحبا بكم في تيجارات، حيث يأتي الخليج للتسوق"}</Heading>
-        <Button colorScheme="teal" size="lg" my={2} as="a" href="/login">
+      <Flex direction="column" align="center" justify="start" minH="100vh" p={4}>
+        <Flex w="full" justify="space-between" align="center" px={4} py={2}>
+          <Logo />
+          <IconButton icon={<FaUserCircle />} colorScheme="teal" variant="outline" size="lg" aria-label="User Account" />
+          <IconButton icon={<FaBars />} colorScheme="teal" variant="outline" size="lg" aria-label="Menu" />
+        </Flex>
+        <Heading my={4}>{language === "en" ? "Welcome to Tiجarat, where the gulf comes to shop" : "مرحبا بكم في تيجارات، حيث يأتي الخليج للتسوق"}</Heading>
+        <Categories />
+        <Button colorScheme="teal" size="lg" my={6} as="a" href="/login">
           {language === "en" ? "Login / Create Account" : "تسجيل الدخول / إنشاء حساب"}
         </Button>
         <SocialLinks />
