@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { ChakraProvider, Button, Flex, Heading, Text, IconButton, Stack, useToast } from "@chakra-ui/react";
+import SocialLinks from "../components/SocialLinks";
 import CustomerServiceBot from "../components/CustomerServiceBot";
 import Categories from "../components/Categories";
-import { FaShoppingCart, FaLanguage, FaPlus, FaMinus, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { FaShoppingCart, FaLanguage, FaPlus, FaMinus } from "react-icons/fa";
 import Logo from "../components/Logo";
 
 const Index = () => {
@@ -26,10 +27,7 @@ const Index = () => {
       <Flex direction="column" align="center" justify="center" minH="100vh" p={4}>
         <Logo />
         <Heading mb={6}>{language === "en" ? "Welcome to Tiجarat, where the gulf comes to shop" : "مرحبا بكم في تيجارات، حيث يأتي الخليج للتسوق"}</Heading>
-        <Flex direction="row" justifyContent="center" mt={4}>
-          <IconButton as="a" href="https://instagram.com" aria-label="Instagram" icon={<FaInstagram />} size="lg" colorScheme="pink" isRound mx={2} />
-          <IconButton as="a" href="https://whatsapp.com" aria-label="WhatsApp" icon={<FaWhatsapp />} size="lg" colorScheme="green" isRound mx={2} />
-        </Flex>
+        <SocialLinks />
         <Button leftIcon={<FaLanguage />} variant="solid" onClick={handleLanguageChange}>
           {language === "en" ? "العربية" : "English"}
         </Button>
