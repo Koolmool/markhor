@@ -1,20 +1,21 @@
-import React from "react";
-import { IconButton, useToast, Box } from "@chakra-ui/react";
+import React, { useState } from "react";
+import { IconButton, Box } from "@chakra-ui/react";
 import { FaRobot } from "react-icons/fa";
+import ChatInterface from "./ChatInterface"; // Import the ChatInterface component
 
 const CustomerServiceBot = () => {
-  const toast = useToast();
+  const [isChatOpen, setIsChatOpen] = useState(false); // State to manage chat visibility
 
   const handleBotClick = () => {
-    toast({
-      title: "Customer Service Bot",
-      description: "Hello! How can I assist you today?",
-      status: "info",
-      duration: 5000,
-      isClosable: true,
-      position: "bottom-left",
-    });
+    setIsChatOpen(!isChatOpen); // Toggle the chat interface visibility
   };
+
+  return (
+    <Box position="fixed" bottom="4" right="4" zIndex="tooltip">
+      <IconButton icon={<FaRobot />} colorScheme="teal" variant="solid" size="lg" isRound onClick={handleBotClick} aria-label="Customer Service Bot" />
+      {isChatOpen && <ChatInterface />} // Conditionally render the ChatInterface component
+    </Box>
+  );
 
   return (
     <Box position="fixed" bottom="4" right="4" zIndex="tooltip">
