@@ -28,7 +28,7 @@ const Index = () => {
     <ChakraProvider>
       <Flex direction="column" align="center" justify="center" minH="100vh" p={4}>
         <Logo />
-        <Heading my={6}>Welcome to Tiجارت</Heading>
+        <Heading my={6}>Welcome to Tiجارت - Page 1</Heading>
         <Categories />
         <CustomerServiceBot />
         <SocialLinks />
