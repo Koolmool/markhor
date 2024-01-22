@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { ChakraProvider, Button, Flex, Heading, Text, IconButton, Stack, useToast } from "@chakra-ui/react";
-import ProtectedRoute from '../components/ProtectedRoute';
+import { ChakraProvider, Button, Flex, Heading, Text, IconButton, Stack, useToast, Link } from "@chakra-ui/react";
+import ProtectedRoute from "../components/ProtectedRoute";
 import PaymentMethods from "../components/PaymentMethods";
 import SocialLinks from "../components/SocialLinks";
 import CustomerServiceBot from "../components/CustomerServiceBot";
@@ -28,7 +28,10 @@ const Index = () => {
     <ChakraProvider>
       <Flex direction="column" align="center" justify="center" minH="100vh" p={4}>
         <Logo />
-        <Heading mb={6}>{language === "en" ? "Welcome to Tiجarat, where the gulf comes to shop" : "مرحبا بكم في تيجارات، حيث يأتي الخليج للتسوق"}</Heading>
+        <Heading mb={4}>{language === "en" ? "Welcome to Tiجarat, where the gulf comes to shop" : "مرحبا بكم في تيجارات، حيث يأتي الخليج للتسوق"}</Heading>
+        <Button colorScheme="teal" size="lg" my={2} as="a" href="/login">
+          {language === "en" ? "Login / Create Account" : "تسجيل الدخول / إنشاء حساب"}
+        </Button>
         <SocialLinks />
         <Button leftIcon={<FaLanguage />} variant="solid" onClick={handleLanguageChange}>
           {language === "en" ? "العربية" : "English"}
