@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { ChakraProvider, Button, Flex, Heading, Text, IconButton, Stack, useToast } from "@chakra-ui/react";
 import CustomerServiceBot from "../components/CustomerServiceBot";
 import Categories from "../components/Categories";
-import { FaShoppingCart, FaRobot, FaLanguage, FaPlus, FaMinus } from "react-icons/fa";
+import { FaShoppingCart, FaLanguage, FaPlus, FaMinus } from "react-icons/fa";
+import Logo from "../components/Logo";
 
 const Index = () => {
   const [language, setLanguage] = useState("en");
@@ -23,6 +24,7 @@ const Index = () => {
   return (
     <ChakraProvider>
       <Flex direction="column" align="center" justify="center" minH="100vh" p={4}>
+        <Logo />
         <Heading mb={6}>{language === "en" ? "Welcome to Tiجarat" : "مرحبا بكم في تيجارات"}</Heading>
         <Button leftIcon={<FaLanguage />} variant="solid" onClick={handleLanguageChange}>
           {language === "en" ? "العربية" : "English"}
