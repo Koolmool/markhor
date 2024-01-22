@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { ChakraProvider, Box, Button, Flex, Heading, Text, Input, IconButton, Stack, useToast } from "@chakra-ui/react";
+import { ChakraProvider, Button, Flex, Heading, Text, IconButton, Stack, useToast } from "@chakra-ui/react";
+import CustomerServiceBot from "../components/CustomerServiceBot";
 import { FaShoppingCart, FaRobot, FaLanguage, FaPlus, FaMinus } from "react-icons/fa";
 
 const Index = () => {
@@ -42,6 +43,7 @@ const Index = () => {
             {language === "en" ? "Checkout" : "الدفع"}
           </Button>
         </Stack>
+        <CustomerServiceBot />
       </Flex>
     </ChakraProvider>
   );
