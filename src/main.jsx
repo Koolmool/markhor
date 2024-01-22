@@ -46,8 +46,21 @@ const theme = extendTheme({
   colors,
   styles: {
     global: {
+      "@keyframes gradient": {
+        "0%": {
+          backgroundPosition: "0% 50%",
+        },
+        "50%": {
+          backgroundPosition: "100% 50%",
+        },
+        "100%": {
+          backgroundPosition: "0% 50%",
+        },
+      },
       "html, body": {
         bg: "linear-gradient(135deg, #e5f6ff 33%, #ffe5f0 33%, #ffe5f0 66%, #fff0e5 66%)",
+        backgroundSize: "300% 300%",
+        animation: "gradient 15s ease infinite",
       },
     },
   },
