@@ -1,5 +1,6 @@
 import React from "react";
-import { Box, Image, Text, Wrap, WrapItem } from "@chakra-ui/react";
+import { Box, Image, Text, Wrap, WrapItem, SimpleGrid } from "@chakra-ui/react";
+import Product from "./Product";
 
 const categories = ["Fashion", "Home", "Toys", "Electronics", "Car Accessories", "Games", "Sports", "Bags", "Lights and Lighting", "Office Supplies"];
 
