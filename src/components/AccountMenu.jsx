@@ -13,6 +13,9 @@ const AccountMenu = ({ isOpen, onClose }) => {
             <Button w="full" as={Link} to="/login">
               Login / Create Account
             </Button>
+            <Button w="full" as={Link} to="/register">
+              Register
+            </Button>
             {/* More options can be added here */}
           </VStack>
         </DrawerBody>
