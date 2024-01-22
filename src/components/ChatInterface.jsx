@@ -9,7 +9,7 @@ const ChatInterface = () => {
     // This is a mock function to simulate sending a message
     // In a real application, you would connect to a chat service
     toast({
-      title: "Customer Service Bot",
+      title: "Raju",
       description: `You said: "${userInput}" - Our answer: "Thank you for reaching out. We will assist you shortly."`,
       status: "info",
       duration: 5000,
