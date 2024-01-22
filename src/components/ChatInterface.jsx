@@ -9,8 +9,8 @@ const ChatInterface = ({ isOpen }) => {
   useEffect(() => {
     if (isOpen && isFirstMessage) {
       toast({
-        title: "Welcome to Tiجارت",
-        description: "Where the gulf comes to shop",
+        title: "Raju",
+        description: "Salam baba",
         status: "info",
         duration: 5000,
         isClosable: true,
