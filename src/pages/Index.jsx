@@ -16,15 +16,7 @@ const Index = () => {
     });
   };
 
-  const handleQuestionSubmit = () => {
-    toast({
-      title: "AI functionality is not implemented.",
-      description: "This is a static example without backend AI capabilities.",
-      status: "info",
-      duration: 2000,
-      isClosable: true,
-    });
-  };
+  // The handleQuestionSubmit function has been removed as AI functionality is no longer needed.
 
   return (
     <ChakraProvider>
@@ -42,14 +34,7 @@ const Index = () => {
           <IconButton icon={<FaPlus />} aria-label="Add to cart" />
         </Flex>
 
-        <Flex my={6} width="100%">
-          <Input placeholder={language === "en" ? "Ask me anything..." : "اسألني أي شيء..."} mr={2} />
-          <Button leftIcon={<FaRobot />} onClick={handleQuestionSubmit}>
-            {language === "en" ? "Ask AI" : "اسأل الذكاء الاصطناعي"}
-          </Button>
-        </Flex>
-
-        <Stack spacing={4} direction="row" align="center">
+        <Stack spacing={4} direction="row" align="center" my={6}>
           <Button leftIcon={<FaShoppingCart />} colorScheme="teal" variant="solid">
             {language === "en" ? "View Cart" : "عرض السلة"}
           </Button>
