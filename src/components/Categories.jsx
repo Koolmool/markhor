@@ -12,14 +12,10 @@ const Categories = () => {
         const imageName = category.toLowerCase().replace(/ /g, "-") + ".jpg";
         return (
           <WrapItem key={category} w="150px" h="150px">
-            <ChakraLink as={Link} to={`/category/${category.toLowerCase().replace(/ /g, "-")}`}>
-              <ChakraLink as={Link} to={`/category/${category.toLowerCase().replace(/ /g, "-")}`} style={{ textDecoration: "none" }}>
-                <Box textAlign="center" shadow="md" borderWidth="1px" borderRadius="md" overflow="hidden">
-                  <Image src={`/assets/categories/${imageName}`} alt={category} boxSize="150px" objectFit="cover" />
-                  <Text mt={2}>{category}</Text>
-                </Box>
-              </ChakraLink>
-            </ChakraLink>
+            <Box as={Link} to={`/category/${category.toLowerCase().replace(/ /g, "-")}`} textAlign="center" shadow="md" borderWidth="1px" borderRadius="md" overflow="hidden" style={{ textDecoration: "none" }}>
+              <Image src={`${process.env.PUBLIC_URL}/assets/categories/${imageName}`} alt={category} boxSize="150px" objectFit="cover" />
+              <Text mt={2}>{category}</Text>
+            </Box>
           </WrapItem>
         );
       })}
