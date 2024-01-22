@@ -1,7 +1,7 @@
 import { Route, BrowserRouter as Router, Routes, Link } from "react-router-dom";
 import { useState } from "react";
 import { IconButton, useDisclosure } from "@chakra-ui/react";
-import { FaUserCircle } from "react-icons/fa";
+import { FaUserCircle, FaBars } from "react-icons/fa";
 import LoginPage from "./pages/LoginPage";
 import Index from "./pages/Index";
 import CategoryPage from "./pages/CategoryPage";
@@ -12,7 +12,8 @@ function App() {
 
   return (
     <Router>
-      <IconButton icon={<FaUserCircle />} position="fixed" top="4" right="4" colorScheme="teal" variant="outline" size="lg" onClick={onOpen} zIndex="tooltip" />
+      <IconButton icon={<FaUserCircle />} position="fixed" top="4" right="16" colorScheme="teal" variant="outline" size="lg" onClick={onOpen} zIndex="tooltip" />
+      <IconButton icon={<FaBars />} position="fixed" top="4" right="4" colorScheme="teal" variant="outline" size="lg" onClick={onOpen} zIndex="tooltip" />
       <AccountMenu isOpen={isOpen} onClose={onClose} />
       <Routes>
         <Route path="/" element={<Index />} />
