@@ -32,15 +32,7 @@ const Index = () => {
           <IconButton icon={<FaUserCircle />} colorScheme="teal" variant="outline" size="lg" aria-label="User Account" />
           <IconButton icon={<FaBars />} colorScheme="teal" variant="outline" size="lg" aria-label="Menu" />
         </Flex>
-        <Heading my={4}>{language === "en" ? "Welcome to Tiجarat, where the gulf comes to shop" : "مرحبا بكم في تيجارات، حيث يأتي الخليج للتسوق"}</Heading>
-        <Categories />
-        <Button colorScheme="teal" size="lg" my={6} as="a" href="/login">
-          {language === "en" ? "Login / Create Account" : "تسجيل الدخول / إنشاء حساب"}
-        </Button>
-        <SocialLinks />
-        <Button leftIcon={<FaLanguage />} variant="solid" onClick={handleLanguageChange}>
-          {language === "en" ? "العربية" : "English"}
-        </Button>
+        <Heading my={4}>{language === "en" ? "Welcome to Tiجارت, where the gulf comes to shop" : "مرحبا بكم في تيجارات، حيث يأتي الخليج للتسوق"}</Heading>
         <Categories />
         <Flex my={6} align="center">
           <IconButton icon={<FaMinus />} aria-label="Remove from cart" mr={2} />
