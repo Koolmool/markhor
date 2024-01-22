@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { ChakraProvider, Button, Flex, Heading, Text, IconButton, Stack, useToast } from "@chakra-ui/react";
 import CustomerServiceBot from "../components/CustomerServiceBot";
+import Categories from "../components/Categories";
 import { FaShoppingCart, FaRobot, FaLanguage, FaPlus, FaMinus } from "react-icons/fa";
 
 const Index = () => {
@@ -26,7 +27,7 @@ const Index = () => {
         <Button leftIcon={<FaLanguage />} variant="solid" onClick={handleLanguageChange}>
           {language === "en" ? "العربية" : "English"}
         </Button>
-
+        <Categories />
         <Flex my={6} align="center">
           <IconButton icon={<FaMinus />} aria-label="Remove from cart" mr={2} />
           <Text fontSize="2xl" mx={3}>
