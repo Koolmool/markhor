@@ -21,7 +21,7 @@ const Index = () => {
   return (
     <ChakraProvider>
       <Flex direction="column" align="center" justify="center" minH="100vh" p={4}>
-        <Heading mb={6}>{language === "en" ? "Welcome to AI Shop" : "مرحبا بكم في متجر الذكاء الاصطناعي"}</Heading>
+        <Heading mb={6}>{language === "en" ? "Welcome to Tiجarat" : "مرحبا بكم في تيجارات"}</Heading>
         <Button leftIcon={<FaLanguage />} variant="solid" onClick={handleLanguageChange}>
           {language === "en" ? "العربية" : "English"}
         </Button>
