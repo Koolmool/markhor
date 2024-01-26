@@ -23,15 +23,28 @@ const ChatInterface = ({ isOpen }) => {
     }
   }, [isOpen, isFirstMessage, toast]);
 
-  const handleSend = () => {
-    if (isFirstMessage) {
-      setIsFirstMessage(false);
+  const getBotResponse = (input) => {
+    const lowerInput = input.toLowerCase();
+    if (lowerInput.includes("products")) {
+      return "You can browse our products by visiting the categories section.";
+    } else if (lowerInput.includes("categories")) {
+      return "We have a wide range of categories like Fashion, Electronics, Games, and more.";
+    } else if (lowerInput.includes("login")) {
+      return "You can log in by clicking on the account icon and entering your credentials.";
+    } else if (lowerInput.includes("registration")) {
+      return "Registering is easy! Just go to the registration page and fill in your details.";
+    } else if (lowerInput.includes("order")) {
+      return "Your order is being processed. You can expect delivery within the next few days.";
+    } else {
+      return "I'm not sure how to answer that. Can you try asking something else?";
     }
-    // This is a mock function to simulate sending a message
-    // In a real application, you would connect to a chat service
+  };
+
+  const handleSend = () => {
+    const botResponse = getBotResponse(userInput);
     toast({
       title: "Raju",
-      description: `You said: "${userInput}" - Our answer: "Thank you for reaching out. We will assist you shortly."`,
+      description: botResponse,
       status: "info",
       duration: 5000,
       isClosable: true,
