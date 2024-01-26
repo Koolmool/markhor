@@ -20,7 +20,7 @@ const DisplayPage = () => {
   return (
     <Box p={4}>
       <IconButton icon={<FaLanguage />} size="md" float="right" onClick={handleLanguageChange} aria-label="Change Language" />
-      <Heading mb={4}>Welcome to Tiجارت where the gulf comes to shop</Heading>
+      <Heading mb={4}>Welcome to Tijarat where the gulf comes to shop</Heading>
       <Text>This is the main display of our website. Here you can find all the features and information about our services.</Text>
       {/* Additional content for display page goes here */}
     </Box>
