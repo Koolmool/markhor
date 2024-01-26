@@ -9,6 +9,7 @@ import CategoryPage from "./pages/CategoryPage";
 import AccountMenu from "./components/AccountMenu";
 import RegisterPage from "./pages/RegisterPage";
 import ServicesPage from "./pages/ServicesPage";
+import WebsitePage from "./pages/WebsitePage";
 
 function App() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -27,6 +28,7 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/services" element={<ServicesPage />} />
+        <Route path="/website" element={<WebsitePage />} />
       </Routes>
       {/* ... */}
     </Router>
