@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import CategoryPage from "./pages/CategoryPage";
 import AccountMenu from "./components/AccountMenu";
 import RegisterPage from "./pages/RegisterPage";
+import ServicesPage from "./pages/ServicesPage";
 
 function App() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -25,6 +26,7 @@ function App() {
         <Route path="/category/:category" element={<CategoryPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
+        <Route path="/services" element={<ServicesPage />} />
       </Routes>
       {/* ... */}
     </Router>

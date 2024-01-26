@@ -16,6 +16,9 @@ const AccountMenu = ({ isOpen, onClose }) => {
             <Button w="full" as={Link} to="/register">
               Register
             </Button>
+            <Button w="full" as={Link} to="/services">
+              Services
+            </Button>
             {/* More options can be added here */}
           </VStack>
         </DrawerBody>
