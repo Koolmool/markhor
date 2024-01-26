@@ -1,41 +1,36 @@
-import React, { useState } from "react";
-import { ChakraProvider, Button, Flex, Heading, Text, IconButton, Stack, useToast, Link } from "@chakra-ui/react";
-import ProtectedRoute from "../components/ProtectedRoute";
-import PaymentMethods from "../components/PaymentMethods";
+import React from "react";
+import { Flex, Heading, IconButton } from "@chakra-ui/react";
+import { FaLanguage } from "react-icons/fa";
 import SocialLinks from "../components/SocialLinks";
-import CustomerServiceBot from "../components/CustomerServiceBot";
 import Categories from "../components/Categories";
-import { FaShoppingCart, FaLanguage, FaPlus, FaMinus, FaUserCircle, FaBars } from "react-icons/fa";
+import CustomerServiceBot from "../components/CustomerServiceBot";
 import Logo from "../components/Logo";
 
-const Index = () => {
-  const [language, setLanguage] = useState("en");
-  const toast = useToast();
-
-  const handleLanguageChange = () => {
-    setLanguage(language === "en" ? "ar" : "en");
-    toast({
-      title: `Language switched to ${language === "en" ? "Arabic" : "English"}.`,
-      status: "info",
-      duration: 2000,
-      isClosable: true,
-    });
-  };
-
-  // The handleQuestionSubmit function has been removed as AI functionality is no longer needed.
-
-  return (
-    <ChakraProvider>
-      <Flex direction="column" align="center" justify="center" minH="100vh" p={4} position="relative">
-        <IconButton icon={<FaLanguage />} size="md" position="absolute" top="4" right="4" onClick={handleLanguageChange} aria-label="Change Language" />
-        <Logo />
-        <Heading my={6}>Welcome to Tiجارت</Heading>
-        <Categories />
-        <CustomerServiceBot />
-        <SocialLinks />
-      </Flex>
-    </ChakraProvider>
-  );
-};
+const Index = () => (
+  <Flex direction="column" align="center" justify="center" minH="100vh" p={4} position="relative" zIndex="docked">
+    <video
+      autoPlay
+      loop
+      muted
+      style={{
+        position: "fixed",
+        right: "0",
+        bottom: "0",
+        minWidth: "100%",
+        minHeight: "100%",
+        zIndex: "-1",
+      }}
+    >
+      <source src="path_to_your_video.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <IconButton icon={<FaLanguage />} size="md" position="absolute" top="4" right="4" aria-label="Change Language" />
+    <Logo />
+    <Heading my={6}>Welcome to Tiجارت</Heading>
+    <Categories />
+    <CustomerServiceBot />
+    <SocialLinks />
+  </Flex>
+);
 
 export default Index;
