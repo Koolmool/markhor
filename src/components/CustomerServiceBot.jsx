@@ -39,7 +39,7 @@ const CustomerServiceBot = () => {
     <Box position="fixed" bottom="4" right="4" zIndex="tooltip">
       {showBot && (
         <>
-          <IconButton icon={<FaRobot />} colorScheme="teal" variant="solid" size="lg" isRound onClick={handleBotClick} aria-label="Customer Service Bot" />
+          <IconButton icon={<FaRobot />} colorScheme="maroon" variant="solid" size="lg" isRound onClick={handleBotClick} aria-label="Customer Service Bot" />
           {isChatOpen && <ChatInterface isOpen={isChatOpen} />}
         </>
       )}
