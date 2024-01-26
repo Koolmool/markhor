@@ -58,12 +58,12 @@ const theme = extendTheme({
   },
 });
 
-import { ScrollProvider } from "./contexts/ScrollContext"; // Import the ScrollProvider
+import { ScrollProvider } from "./contexts/ScrollContext";
+import { UserProvider } from "./contexts/UserContext"; // Correctly placed import for UserProvider
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ChakraProvider theme={theme}>
-      import {UserProvider} from './contexts/UserContext'; // Correctly placed import for UserProvider // ...
       <ScrollProvider>
         <UserProvider>
           {" "}
