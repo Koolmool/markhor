@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Input, Button, VStack, useToast } from "@chakra-ui/react";
+import { Input, Button, VStack, useToast, IconButton } from "@chakra-ui/react";
 
 const ChatInterface = ({ isOpen }) => {
   const [userInput, setUserInput] = useState("");
