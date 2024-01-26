@@ -40,8 +40,7 @@ function App() {
         <Route path="/website" element={<WebsitePage />} />
         <Route path="/video" element={<VideoPage />} /> {/* This is the new route */}
       </Routes>
-      <Route path="/profile" element={<ProfilePage />} /> // Correctly placed ProfilePage route
-      {/* ... */}
+      {/* The ProfilePage route has been removed. Access to the profile is now through an icon button in the Navigation component. */}
     </Router>
   );
 }
