@@ -18,6 +18,7 @@ const ChatInterface = ({ isOpen }) => {
         duration: 5000,
         isClosable: true,
         position: "bottom-left",
+        color: "black",
       });
       setIsFirstMessage(false);
     }
@@ -49,6 +50,7 @@ const ChatInterface = ({ isOpen }) => {
       duration: 5000,
       isClosable: true,
       position: "bottom-left",
+      color: "black",
     });
     setUserInput(""); // Clear the input after sending a message
   };
