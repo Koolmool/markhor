@@ -11,10 +11,9 @@ const Categories = () => {
       {categories.map((category) => {
         const imageName = category.toLowerCase().replace(/ /g, "-") + ".jpg";
         return (
-          <WrapItem key={category} w="150px" h="150px">
-            <Box as={Link} to={`/category/${category.toLowerCase().replace(/ /g, "-")}`} textAlign="center" shadow="md" borderWidth="1px" borderRadius="md" overflow="hidden" style={{ textDecoration: "none" }}>
-              <Image src={`${process.env.PUBLIC_URL}/assets/categories/${imageName}`} alt={category} boxSize="150px" objectFit="cover" />
-              <Text mt={2}>{category}</Text>
+          <WrapItem key={category} w="100%" p={4}>
+            <Box as={Link} to={`/category/${category.toLowerCase().replace(/ /g, "-")}`} textAlign="center" shadow="md" borderWidth="1px" borderRadius="md" overflow="hidden" style={{ textDecoration: "none" }} p={4} w="full">
+              <Text fontSize="xl">{category}</Text>
             </Box>
           </WrapItem>
         );
