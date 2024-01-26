@@ -57,8 +57,11 @@ const theme = extendTheme({
           backgroundPosition: "0% 50%",
         },
       },
-      "html, body": {
-        bg: "linear-gradient(135deg, #e5f6ff 33%, #ffe5f0 33%, #ffe5f0 66%, #fff0e5 66%)",
+      html: {
+        height: "100%",
+      },
+      body: {
+        background: "linear-gradient(135deg, #e5f6ff 33%, #ffe5f0 33%, #ffe5f0 66%, #fff0e5 66%)",
         backgroundSize: "300% 300%",
         animation: "gradient 15s ease infinite",
         minHeight: "100vh",
