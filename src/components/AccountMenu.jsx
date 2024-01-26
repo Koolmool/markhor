@@ -12,10 +12,10 @@ const AccountMenu = ({ isOpen, onClose }) => {
         </DrawerHeader>
         <DrawerBody>
           <VStack spacing={4}>
-            <Button w="full" as="a" href="https://preview-62cafd36--login-authenticator.gptengineer.run/" target="_blank" colorScheme="black" color="black">
+            <Button w="full" as={Link} to="/login" colorScheme="black" color="black">
               Login / Create Account
             </Button>
-            <Button w="full" as="a" href="https://preview-62cafd36--login-authenticator.gptengineer.run/" target="_blank" colorScheme="black" color="black">
+            <Button w="full" as={Link} to="/register" colorScheme="black" color="black">
               Register
             </Button>
             <Button w="full" as={Link} to="/services" colorScheme="black" color="black">
