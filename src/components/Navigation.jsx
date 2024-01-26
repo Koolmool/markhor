@@ -14,6 +14,9 @@ const Navigation = () => {
       <Link as={RouterLink} to="/website" p="2">
         About
       </Link>
+      <Link as={RouterLink} to="/videos" p="2">
+        Videos
+      </Link>
       {/* Add more navigation links as needed */}
     </Flex>
   );

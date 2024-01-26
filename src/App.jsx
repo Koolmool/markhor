@@ -10,6 +10,7 @@ import AccountMenu from "./components/AccountMenu";
 import RegisterPage from "./pages/RegisterPage";
 import ServicesPage from "./pages/ServicesPage";
 import WebsitePage from "./pages/WebsitePage";
+import VideoPage from "./pages/VideoPage"; // This is the new import
 
 function App() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -29,6 +30,7 @@ function App() {
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/website" element={<WebsitePage />} />
+        <Route path="/video" element={<VideoPage />} /> {/* This is the new route */}
       </Routes>
       {/* ... */}
     </Router>
