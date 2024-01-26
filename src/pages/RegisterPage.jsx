@@ -29,7 +29,9 @@ function RegisterPage() {
       });
       return;
     }
-    localStorage.setItem(email, password);
+    const currentDate = new Date().toISOString().split("T")[0];
+    const userProfile = { name: email.split("@")[0], email, memberSince: currentDate, purchases: [] };
+    localStorage.setItem(email, JSON.stringify(userProfile));
     toast({
       title: "Account created",
       description: "You can now log in",

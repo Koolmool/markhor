@@ -21,6 +21,9 @@ const AccountMenu = ({ isOpen, onClose }) => {
             <Button w="full" as={Link} to="/services" colorScheme="black" color="black">
               Services
             </Button>
+            <Button w="full" as={Link} to="/profile" colorScheme="black" color="black">
+              Profile
+            </Button>
             {/* More options can be added here */}
           </VStack>
         </DrawerBody>

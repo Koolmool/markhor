@@ -10,7 +10,8 @@ import AccountMenu from "./components/AccountMenu";
 import RegisterPage from "./pages/RegisterPage";
 import ServicesPage from "./pages/ServicesPage";
 import WebsitePage from "./pages/WebsitePage";
-import VideoPage from "./pages/VideoPage"; // This is the new import
+import VideoPage from "./pages/VideoPage";
+import ProfilePage from "./pages/ProfilePage"; // Correctly placed import for ProfilePage
 
 import { useScrollContext } from "./contexts/ScrollContext"; // Import useScrollContext
 
@@ -39,6 +40,7 @@ function App() {
         <Route path="/website" element={<WebsitePage />} />
         <Route path="/video" element={<VideoPage />} /> {/* This is the new route */}
       </Routes>
+      <Route path="/profile" element={<ProfilePage />} /> // Correctly placed ProfilePage route
       {/* ... */}
     </Router>
   );

@@ -9,7 +9,9 @@ const LoginPage = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     const storedPassword = localStorage.getItem(email);
-    if (storedPassword === password) {
+    const userProfile = JSON.parse(storedPassword);
+    if (userProfile && userProfile.password === password) {
+      localStorage.setItem("currentUser", JSON.stringify(userProfile));
       toast({
         title: "Login Successful",
         description: "You are now logged in",

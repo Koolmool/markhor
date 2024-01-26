@@ -63,8 +63,14 @@ import { ScrollProvider } from "./contexts/ScrollContext"; // Import the ScrollP
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ChakraProvider theme={theme}>
+      import {UserProvider} from './contexts/UserContext'; // Correctly placed import for UserProvider // ...
       <ScrollProvider>
-        <App />
+        <UserProvider>
+          {" "}
+          // Correctly wrap App with UserProvider
+          <App />
+        </UserProvider>{" "}
+        // Close UserProvider correctly
       </ScrollProvider>
     </ChakraProvider>
   </React.StrictMode>,
