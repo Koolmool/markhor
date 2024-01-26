@@ -4,6 +4,7 @@ import { FaLanguage } from "react-icons/fa";
 import SocialLinks from "../components/SocialLinks";
 import Categories from "../components/Categories";
 import CustomerServiceBot from "../components/CustomerServiceBot";
+import SearchBar from "../components/SearchBar";
 import Logo from "../components/Logo";
 
 const Index = () => (
@@ -27,9 +28,12 @@ const Index = () => (
     <Categories />
     <CustomerServiceBot />
     <SocialLinks />
+    <SearchBar
+      onSearch={(searchTerm) => {
+        /* Logic to handle search */
+      }}
+    />
     <IconButton icon={<FaLanguage />} size="md" position="absolute" top="4" right="4" aria-label="Change Language" />
-    <Logo />
-    <Heading my={6}>Welcome to Tiجارت</Heading>
     <Categories />
     <CustomerServiceBot />
     <SocialLinks />
