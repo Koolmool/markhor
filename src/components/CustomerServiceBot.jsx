@@ -3,9 +3,11 @@ import { IconButton, Box } from "@chakra-ui/react";
 import { FaRobot } from "react-icons/fa";
 import ChatInterface from "./ChatInterface"; // Import the ChatInterface component
 
+import { useScrollContext } from "../contexts/ScrollContext"; // Import useScrollContext
+
 const CustomerServiceBot = () => {
   const [isChatOpen, setIsChatOpen] = useState(false);
-  const [showBot, setShowBot] = useState(true); // State to manage chat visibility and bot appearance based on scroll
+  const { showBot, setShowBot } = useScrollContext(); // Use context state instead of local state
 
   const handleBotClick = () => {
     setIsChatOpen(!isChatOpen); // Toggle the chat interface visibility

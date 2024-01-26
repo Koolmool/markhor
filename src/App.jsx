@@ -12,15 +12,22 @@ import ServicesPage from "./pages/ServicesPage";
 import WebsitePage from "./pages/WebsitePage";
 import VideoPage from "./pages/VideoPage"; // This is the new import
 
+import { useScrollContext } from "./contexts/ScrollContext"; // Import useScrollContext
+
 function App() {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const { showBot } = useScrollContext(); // Consume the showBot state
 
   return (
     <Router>
-      <IconButton icon={<FaUserCircle />} position="fixed" top="4" right="16" colorScheme="teal" variant="outline" size="lg" onClick={onOpen} zIndex="tooltip" />
-      <IconButton icon={<FaBars />} position="fixed" top="4" right="4" bg="maroon" color="white" variant="outline" size="lg" onClick={onOpen} zIndex="tooltip">
-        Options
-      </IconButton>
+      {showBot && (
+        <>
+          <IconButton icon={<FaUserCircle />} position="fixed" top="4" right="16" colorScheme="teal" variant="outline" size="lg" onClick={onOpen} zIndex="tooltip" />
+          <IconButton icon={<FaBars />} position="fixed" top="4" right="4" bg="maroon" color="white" variant="outline" size="lg" onClick={onOpen} zIndex="tooltip">
+            Options
+          </IconButton>
+        </>
+      )}
       <AccountMenu isOpen={isOpen} onClose={onClose} />
       <Navigation />
       <Routes>

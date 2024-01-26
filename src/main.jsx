@@ -58,10 +58,14 @@ const theme = extendTheme({
   },
 });
 
+import { ScrollProvider } from "./contexts/ScrollContext"; // Import the ScrollProvider
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ChakraProvider theme={theme}>
-      <App />
+      <ScrollProvider>
+        <App />
+      </ScrollProvider>
     </ChakraProvider>
   </React.StrictMode>,
 );
