@@ -41,7 +41,7 @@ const LoginPage = () => {
             <FormLabel>Password</FormLabel>
             <Input type="password" placeholder="Enter your password" value={password} onChange={(e) => setPassword(e.target.value)} />
           </FormControl>
-          <Button width="full" mt={4} type="submit">
+          <Button width="full" mt={4} type="submit" colorScheme="black">
             Sign In
           </Button>
         </Box>

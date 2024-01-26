@@ -58,7 +58,7 @@ const ChatInterface = ({ isOpen }) => {
   return (
     <VStack position="fixed" bottom="16" right="4" p={4} bg="white" boxShadow="lg" borderRadius="md" zIndex="tooltip" spacing={4}>
       <Input placeholder="Ask me anything..." value={userInput} onChange={(e) => setUserInput(e.target.value)} onKeyPress={(e) => e.key === "Enter" && handleSend()} autoFocus />
-      <Button colorScheme="black" onClick={handleSend}>
+      <Button colorScheme="black" onClick={handleSend} colorScheme="black">
         Send
       </Button>
     </VStack>

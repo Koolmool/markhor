@@ -54,7 +54,7 @@ function RegisterPage() {
           <FormLabel>Confirm Password</FormLabel>
           <Input type="password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
         </FormControl>
-        <Button width="full" mt={4} type="submit" colorScheme="teal">
+        <Button width="full" mt={4} type="submit" colorScheme="black">
           Register
         </Button>
       </VStack>
