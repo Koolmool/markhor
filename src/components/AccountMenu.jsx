@@ -7,7 +7,9 @@ const AccountMenu = ({ isOpen, onClose }) => {
     <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
       <DrawerOverlay />
       <DrawerContent>
-        <DrawerHeader borderBottomWidth="1px">Account</DrawerHeader>
+        <DrawerHeader borderBottomWidth="1px" bg="black" color="white">
+          Account
+        </DrawerHeader>
         <DrawerBody>
           <VStack spacing={4}>
             <Button w="full" as="a" href="https://preview-62cafd36--login-authenticator.gptengineer.run/" target="_blank" colorScheme="black">
