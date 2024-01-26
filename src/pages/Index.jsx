@@ -22,6 +22,11 @@ const Index = () => (
         zIndex: "-1",
       }}
     />
+    <Logo />
+    <Heading my={6}>Welcome to Tiجارت</Heading>
+    <Categories />
+    <CustomerServiceBot />
+    <SocialLinks />
     <IconButton icon={<FaLanguage />} size="md" position="absolute" top="4" right="4" aria-label="Change Language" />
     <Logo />
     <Heading my={6}>Welcome to Tiجارت</Heading>
