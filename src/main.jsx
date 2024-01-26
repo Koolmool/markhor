@@ -64,6 +64,7 @@ const theme = extendTheme({
         minHeight: "100vh",
         width: "100%",
         overflowX: "hidden",
+        backgroundAttachment: "fixed",
       },
     },
   },
