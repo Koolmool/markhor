@@ -15,7 +15,7 @@ function App() {
   return (
     <Router>
       <IconButton icon={<FaUserCircle />} position="fixed" top="4" right="16" colorScheme="teal" variant="outline" size="lg" onClick={onOpen} zIndex="tooltip" />
-      <IconButton icon={<FaBars />} position="fixed" top="4" right="4" colorScheme="teal" variant="outline" size="lg" onClick={onOpen} zIndex="tooltip">
+      <IconButton icon={<FaBars />} position="fixed" top="4" right="4" bg="maroon" color="white" variant="outline" size="lg" onClick={onOpen} zIndex="tooltip">
         Options
       </IconButton>
       <AccountMenu isOpen={isOpen} onClose={onClose} />

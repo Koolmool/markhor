@@ -4,7 +4,7 @@ import { Link as RouterLink } from "react-router-dom";
 
 const Navigation = () => {
   return (
-    <Flex as="nav" align="center" justify="space-between" wrap="wrap" padding="1.5rem" bg="teal.500" color="white">
+    <Flex as="nav" align="center" justify="space-between" wrap="wrap" padding="1.5rem" bg="maroon" color="white">
       <Link as={RouterLink} to="/" p="2">
         Home
       </Link>
