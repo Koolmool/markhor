@@ -1,8 +1,11 @@
-import React from "react";
-import { Image } from "@chakra-ui/react";
-
 const Logo = () => {
-  // The size of the logo as per the following line is "150px".
+  return (
+    <Image
+      src="https://share.icloud.com/photos/0d18-rNqX4c36p9cT4MqwXDkg" // URL from the provided link
+      boxSize="250px" // Size matching the picture's dimensions
+      objectFit="contain"
+    />
+  );
 };
 
 export default Logo;
