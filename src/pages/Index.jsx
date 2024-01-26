@@ -26,7 +26,8 @@ const Index = () => {
 
   return (
     <ChakraProvider>
-      <Flex direction="column" align="center" justify="center" minH="100vh" p={4}>
+      <Flex direction="column" align="center" justify="center" minH="100vh" p={4} position="relative">
+        <IconButton icon={<FaLanguage />} size="md" position="absolute" top="4" right="4" onClick={handleLanguageChange} aria-label="Change Language" />
         <Logo />
         <Heading my={6}>Welcome to Tiجارت</Heading>
         <Categories />
